@@ -3,8 +3,12 @@ public class TicTacToe {
         System.out.println("Hello World!");
     }
 
-    public Position convertInputToPos(int userInput) {
+    Position convertInputToPos(int userInput) {
         return new Position(getRow(userInput), getColumn(userInput));
+    }
+
+    boolean isFree(int userInput) {
+        return true;
     }
 
     private int getColumn(int userInput) {
