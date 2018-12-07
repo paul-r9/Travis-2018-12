@@ -42,7 +42,16 @@ public class SampleTest {
         Assert.assertEquals('O',currentBoard[1][1]);
     }
 
-    
+    @Test
+    public void NewBoard_cannotPlayInSameSquare() {
+        TicTacToe ttt = new TicTacToe();
+
+        ttt.play(0, 0);
+        boolean playResult = ttt.play(0,0);
+
+        Assert.assertFalse(playResult);
+    }
+
     //    A B C
     // 1. _ X _
     // 2. _ _ _
