@@ -18,6 +18,12 @@ matrix:
           - TEAM=ttt_3
       before_script: cd java/ttt_3
 
+    - language: java
+      jdk: oraclejdk8
+      env:
+        - TEAM=ttt_7
+      before_script: cd java/ttt_7
+
     - language: csharp
       solution: csharp/ttt_4/TicTacToe.sln
       sudo: required
