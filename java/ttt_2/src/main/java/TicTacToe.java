@@ -1,9 +1,10 @@
 public class TicTacToe {
 
-    private boolean[][] board = {
-            {false, false, false},
-            {false, false, false},
-            {false, false, false}
+
+    private char[][] board = {
+            {' ', ' ', ' '},
+            {' ', ' ', ' '},
+            {' ', ' ', ' '}
     };
 
     public static void main(String[] args) {
@@ -14,11 +15,11 @@ public class TicTacToe {
         return x >= 0 && x <= 2 && y >= 0 && y <= 2;
     }
 
-    public void placeToken(int x, int y) {
-        board[x][y] = true;
+    public void placeToken(int x, int y, char token) {
+        board[x][y] = token;
     }
 
     public boolean isCoordTaken(int x, int y) {
-        return board[x][y];
+        return board[x][y] != ' ';
     }
 }

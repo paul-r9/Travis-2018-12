@@ -65,7 +65,7 @@ public class SampleTest {
     @Test
     public void placeToken_At0_0_expectIsTaken() {
         TicTacToe TicTacToe = new TicTacToe();
-        TicTacToe.placeToken(0, 0);
+        TicTacToe.placeToken(0, 0, 'X');
         boolean isTaken = TicTacToe.isCoordTaken(0,0);
         Assert.assertTrue("Token ", isTaken);
     }
@@ -80,8 +80,10 @@ public class SampleTest {
     @Test
     public void placeToken_At1_0_expectIsTaken() {
         TicTacToe TicTacToe = new TicTacToe();
-        TicTacToe.placeToken(1, 0);
+        TicTacToe.placeToken(1, 0, 'X');
         boolean isTaken = TicTacToe.isCoordTaken(1,1);
         Assert.assertFalse("Token ", isTaken);
     }
+
+    @
 }
