@@ -1,4 +1,6 @@
 public class TicTacToe {
+    private boolean[][] playGrid = new boolean[3][3];
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
@@ -8,7 +10,7 @@ public class TicTacToe {
     }
 
     boolean isFree(int userInput) {
-        return true;
+        return !playGrid[getRow(userInput)][getColumn(userInput)];
     }
 
     private int getColumn(int userInput) {
@@ -17,6 +19,10 @@ public class TicTacToe {
 
     private int getRow(int userInput) {
         return userInput / 3;
+    }
+
+    void play(int userInput) {
+        playGrid[getRow(userInput)][getColumn(userInput)] = true;
     }
 }
 
