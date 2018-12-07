@@ -25,13 +25,11 @@ public class SampleTest {
         Assert.assertTrue(ttt.isFree(userInput));
     }
     @Test
-    public void playPosition() {
+    public void playerEnters_SecondPlayerAndPositionIsTaken() {
         int userInput = 1;
         TicTacToe ttt = new TicTacToe();
         ttt.play(userInput);
         Assert.assertFalse(ttt.isFree(userInput));
-
-
     }
 
 

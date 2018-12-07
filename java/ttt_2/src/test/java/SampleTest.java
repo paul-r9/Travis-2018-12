@@ -85,5 +85,22 @@ public class SampleTest {
         Assert.assertFalse("Token ", isTaken);
     }
 
-    @
+    @Test
+    public void winTopRow_expectIsWinner() {
+        TicTacToe TicTacToe = new TicTacToe();
+        TicTacToe.placeToken(0, 0, 'X');
+        TicTacToe.placeToken(0, 1, 'X');
+        TicTacToe.placeToken(0, 2, 'X');
+        boolean isWin = TicTacToe.isWinner('X');
+
+        Assert.assertTrue("Winner", isWin);
+    }
+
+    @Test
+    public void newGame_expectNoWinner() {
+        TicTacToe TicTacToe = new TicTacToe();
+        boolean isWin = TicTacToe.isWinner('X');
+
+        Assert.assertFalse("No Winner", isWin);
+    }
 }
