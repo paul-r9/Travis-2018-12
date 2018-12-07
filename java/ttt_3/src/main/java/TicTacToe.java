@@ -38,7 +38,12 @@ public class TicTacToe {
     	return boardStr;
     }
     
-    public void addChar(char mark,int x,int y) {
-    	board[y][x] = mark;
+    public boolean addChar(char mark,int x,int y) {
+    	if (board[y][x]== '\0') {
+    		board[y][x] = mark;
+    		return true;
+    	}
+    	
+       	return false;
     }
 }
