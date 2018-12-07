@@ -13,10 +13,19 @@ namespace TravisTests {
 
             var sut = new TickTacToeBoard();
             sut.AddPlayer(player1);
-
             sut.AddPlayer(player2);
 
             Assert.AreEqual(2, (int)sut.NumberOfPlayers);
+        }
+
+        [Test]
+        public void RowOneColumnOneisEmpty()
+        {
+            var sut = new TickTacToeBoard();
+
+            Assert.AreEqual(string.Empty, sut.Row1Col1);
+            
+
         }
 
     }
