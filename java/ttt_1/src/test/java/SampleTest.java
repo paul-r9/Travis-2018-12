@@ -17,4 +17,13 @@ public class SampleTest {
         TicTacToe ttt = new TicTacToe();
         Assert.assertEquals(pos, ttt.convertInputToPos(userInput));
     }
+    @Test
+    public void playerEnters_CheckPositionFree() {
+        int userInput = 1;
+        TicTacToe ttt = new TicTacToe();
+
+        Assert.assertTrue(ttt.isFree(userInput));
+    }
+
+
 }
