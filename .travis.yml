@@ -39,20 +39,6 @@ matrix:
           - dotnet publish -c release
 
     - language: csharp
-      solution: csharp/ttt_5/TicTacToe.sln
-      sudo: required
-      dist: trusty
-      mono: none
-      dotnet: 2.0.0
-      env:
-          - TEAM=ttt_5
-      before_script: cd csharp/ttt_5
-      script:
-          - dotnet restore
-          - dotnet test TicTacToeTests/TicTacToeTests.csproj
-          - dotnet publish -c release
-
-    - language: csharp
       solution: csharp/ttt_6/TicTacToe.sln
       sudo: required
       dist: trusty
