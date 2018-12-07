@@ -8,5 +8,7 @@
         {
             this._playerName = playerName;
         }
+
+        public string PlayerName { get => _playerName; set => _playerName = value; }
     }
 }

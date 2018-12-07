@@ -19,5 +19,10 @@ namespace TravisTests
         {
             Players.Add(player);
         }
+
+        internal void SelectLocation(Player player1, int row1, int col1)
+        {
+            this.Board[row1, col1] = player1.PlayerName;
+        }
     }
 }
