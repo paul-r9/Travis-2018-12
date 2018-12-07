@@ -76,6 +76,18 @@ namespace TicTacToe {
 
 		public bool IsDiagonalWinner()
 		{
+			if (_board[1, 1] == 0)
+				return false;
+
+			if(_board[0,0] == _board[1,1] && _board[2,2] == _board[1, 1])
+			{
+				return true;
+			}
+
+			if (_board[0, 2] == _board[1, 1] && _board[2, 0] == _board[1, 1])
+			{
+				return true;
+			}
 			return false;
 		}
 	}

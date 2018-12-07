@@ -71,5 +71,15 @@ namespace Fred
 			board.AssignField(2, 2, Board.O);
 			Assert.IsTrue(board.IsVerticalWinner());
 		}
+
+		[Test]
+		public void DiagonalWinner()
+		{
+			Board board = new Board();
+			board.AssignField(0, 0, Board.X);
+			board.AssignField(1, 1, Board.X);
+			board.AssignField(2, 2, Board.X);
+			Assert.IsTrue(board.IsDiagonalWinner());
+		}
 	}
 }
