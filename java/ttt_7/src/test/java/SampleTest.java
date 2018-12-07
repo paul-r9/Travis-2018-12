@@ -20,7 +20,7 @@ public class SampleTest {
     }
 
     @Test
-    public void NewBoard_valueRetainedAfterEntry() {
+    public void NewBoard_valueAfterFirstEntryIsX() {
         TicTacToe ttt = new TicTacToe();
 
         ttt.play(0, 0);
@@ -30,6 +30,19 @@ public class SampleTest {
         Assert.assertEquals('X',currentBoard[0][0]);
 
     }
+
+    @Test
+    public void NewBoard_valueAfterSecondEntryIsO() {
+        TicTacToe ttt = new TicTacToe();
+
+        ttt.play(0, 0);
+        ttt.play(1,1);
+        char [][] currentBoard = ttt.getBoard();
+
+        Assert.assertEquals('O',currentBoard[1][1]);
+    }
+
+    
     //    A B C
     // 1. _ X _
     // 2. _ _ _

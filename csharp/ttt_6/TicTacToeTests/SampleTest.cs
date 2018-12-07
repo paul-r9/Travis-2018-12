@@ -33,5 +33,15 @@ namespace Fred
 			board._board[x, y] = 1;
 			Assert.IsTrue(board.IsFieldTaken(x, y));
 		}
+
+		[Test]
+		public void SetField()
+		{
+			Board board = new Board();
+			int x = 0;
+			int y = 0;
+			Assert.IsTrue(board.AssignField(x, y, Board.X));
+		}
+
 	}
 }
