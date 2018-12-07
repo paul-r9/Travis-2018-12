@@ -2,7 +2,7 @@
 
 namespace TicTacToe {
     public class Board {
-		private int[,] _board = new int[3,3];
+		public int[,] _board = new int[3,3];
 
         static void Main(string[] args) {
             Console.WriteLine("Hello Tic Tac Toe!");
@@ -21,6 +21,11 @@ namespace TicTacToe {
 				}
 			}
 			return true;
+		}
+
+		public bool? IsFieldTaken(int x, int y)
+		{
+				return _board[x, y] != 0;
 		}
 	}
 }
