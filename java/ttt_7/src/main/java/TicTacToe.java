@@ -16,7 +16,8 @@ public class TicTacToe {
 
         for (int outerIndex = 0; outerIndex < 3; outerIndex++ ){
             for (int innerIndex = 0; innerIndex < 3; innerIndex++ ){
-                board [outerIndex][innerIndex] = ' ';
+                board [outerIndex][innerIndex] = '$';
+                // cody was here ;)
             }
         }
     }

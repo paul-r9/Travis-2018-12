@@ -23,10 +23,9 @@ namespace TravisTests {
         {
             var sut = new TickTacToeBoard();
 
-            Assert.AreEqual(string.Empty, sut.Row1Col1);
-            
 
+
+            Assert.IsNull(sut.Board[0, 0]);
         }
-
     }
 }
