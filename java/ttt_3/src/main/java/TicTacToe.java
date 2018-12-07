@@ -39,6 +39,10 @@ public class TicTacToe {
     }
     
     public boolean addChar(char mark,int x,int y) {
+    	if (x > 2 || y > 2) {
+    		System.out.println("X and Y coordinate cannot be greater than 2");
+    		return false;
+    	}
     	if (board[y][x]== '\0') {
     		board[y][x] = mark;
     		return true;
