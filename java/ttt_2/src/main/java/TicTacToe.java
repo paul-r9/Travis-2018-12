@@ -1,21 +1,25 @@
 public class TicTacToe {
 
-    private static boolean lol;
+
+    private char[][] board = {
+            {' ', ' ', ' '},
+            {' ', ' ', ' '},
+            {' ', ' ', ' '}
+    };
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 
-    public static boolean isValidCoordinate(int x, int y) {
-
+    public boolean isValidCoordinate(int x, int y) {
         return x >= 0 && x <= 2 && y >= 0 && y <= 2;
     }
 
-    public static void placeToken(int x, int y) {
-        lol = true;
+    public void placeToken(int x, int y, char token) {
+        board[x][y] = token;
     }
 
-    public static boolean isCoordTaken(int x, int y) {
-        return lol;
+    public boolean isCoordTaken(int x, int y) {
+        return board[x][y] != ' ';
     }
 }
