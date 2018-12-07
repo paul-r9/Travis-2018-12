@@ -46,7 +46,7 @@ namespace TicTacToe {
 
 		public bool IsHorizontalWinner()
 		{
-			for (int y=0; y<2; y++)
+			for (int y=0; y<=2; y++)
 			{
 				if (_board[0, y] == 0)
 					continue;
@@ -61,6 +61,16 @@ namespace TicTacToe {
 
 		public bool IsVerticalWinner()
 		{
+			for (int x = 0; x <= 2; x++)
+			{
+				if (_board[x, 0] == 0)
+					continue;
+				if (_board[x, 0] != _board[x, 1])
+					continue;
+				if (_board[x, 0] != _board[x, 2])
+					continue;
+				return true;
+			}
 			return false;
 		}
 

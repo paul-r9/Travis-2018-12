@@ -22,4 +22,8 @@ public class TicTacToe {
     public boolean isCoordTaken(int x, int y) {
         return board[x][y] != ' ';
     }
+
+    public boolean isWinner(char token) {
+        return board[0][0] == token;
+    }
 }
