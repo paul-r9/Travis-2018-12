@@ -22,7 +22,11 @@ public class TicTacToe {
         }
     }
 
-    public void play(int x, int y) {
+    public boolean play(int x, int y) {
+
+        if (!isSquareEmpty(x,y))
+            return false;
+
         board[x][y] = player;
 
         if (player == 'X') {
@@ -30,5 +34,10 @@ public class TicTacToe {
         } else {
             player = 'X';
         }
+
+        return true;
+    }
+    public boolean isSquareEmpty(int x, int y) {
+        return board[x][y] == ' ';
     }
 }

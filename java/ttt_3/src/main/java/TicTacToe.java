@@ -1,8 +1,21 @@
+import java.util.Scanner;
+
 public class TicTacToe {
 	private char[][] board;
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+    	TicTacToe ttt = new TicTacToe();
+    	while (true) {
+    		ttt.printBoard();
+    		System.out.print("Enter Mark: ");
+    		Scanner input = new Scanner(System.in);
+    		char mark = input.nextLine().charAt(0);
+    		System.out.print("Enter X: ");
+    		int x = input.nextInt();
+    		System.out.print("Enter Y: ");
+    		int y = input.nextInt();
+    		ttt.addChar(mark, x, y);
+    	}
     }
     
     public TicTacToe() {
@@ -26,6 +39,6 @@ public class TicTacToe {
     }
     
     public void addChar(char mark,int x,int y) {
-    	board[x][y] = mark;
+    	board[y][x] = mark;
     }
 }

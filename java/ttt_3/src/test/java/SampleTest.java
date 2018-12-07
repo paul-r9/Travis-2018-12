@@ -8,4 +8,12 @@ public class SampleTest {
     	TicTacToe ttt = new TicTacToe();
     	Assert.assertEquals(emptyBoard, ttt.printBoard());
     }
+    
+    @Test
+    public void test_input_command(){
+    	TicTacToe ttt = new TicTacToe();
+    	String board1 = "X__\n___\n___\n";
+    	ttt.addChar('X',0,0);
+    	Assert.assertEquals(board1, ttt.printBoard());
+    }
 }
