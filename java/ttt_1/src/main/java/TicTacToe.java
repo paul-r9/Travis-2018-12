@@ -4,7 +4,15 @@ public class TicTacToe {
     }
 
     public Position convertInputToPos(int userInput) {
-        return new Position(0,0);
+        return new Position(getRow(userInput), getColumn(userInput));
+    }
+
+    private int getColumn(int userInput) {
+        return (userInput - 1) % 3;
+    }
+
+    private int getRow(int userInput) {
+        return userInput / 3;
     }
 }
 

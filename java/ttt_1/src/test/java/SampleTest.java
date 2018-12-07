@@ -10,4 +10,11 @@ public class SampleTest {
         TicTacToe ttt = new TicTacToe();
         Assert.assertEquals(pos, ttt.convertInputToPos(userInput));
     }
+    @Test
+    public void playerEnters5() {
+        int userInput = 5;
+        Position pos = new Position(1,1);
+        TicTacToe ttt = new TicTacToe();
+        Assert.assertEquals(pos, ttt.convertInputToPos(userInput));
+    }
 }
