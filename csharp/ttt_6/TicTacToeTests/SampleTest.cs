@@ -1,15 +1,18 @@
 
 using NUnit.Framework;
+using TicTacToe;
 
-namespace TravisTests {
-    
-    [TestFixture]
+namespace Fred
+{
+
+	[TestFixture]
     public class SampleTest {
         
         [Test]
-        public void ExampleTest() {
-            Assert.IsTrue(true);
-//            Assert.Fail("force failure to see CI fail");
+        public void FieldNotTaken() {
+			Board board = new Board();
+
+            Assert.IsFalse(board.AllFieldsTaken());
         }
     }
 }
