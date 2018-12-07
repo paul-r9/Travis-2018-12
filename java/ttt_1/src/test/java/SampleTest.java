@@ -4,8 +4,10 @@ import org.junit.Test;
 public class SampleTest {
 
     @Test
-    public void exampleTest() {
-        Assert.assertTrue("Example of a passing assertion", true);
-//        Assert.fail("break travis");
+    public void playerEnters1() {
+        int userInput = 1;
+        Position pos = new Position(0,0);
+        TicTacToe ttt = new TicTacToe();
+        Assert.assertEquals(pos, ttt.convertInputToPos(userInput));
     }
 }
