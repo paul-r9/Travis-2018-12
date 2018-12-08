@@ -52,6 +52,51 @@ public class SampleTest {
         Assert.assertFalse(playResult);
     }
 
+    @Test
+    public void NewBoard_winningPlayVertical() {
+        TicTacToe ttt = new TicTacToe();
+
+        ttt.play(0, 0); // X
+        ttt.play(0, 1);
+        ttt.play(1, 0); // X
+        ttt.play(1, 1);
+        ttt.play(2, 0); // X
+
+        boolean gameOver = ttt.isGameOver();
+
+        Assert.assertTrue(gameOver);
+    }
+
+    @Test
+    public void NewBoard_winningPlayHorizontal() {
+        TicTacToe ttt = new TicTacToe();
+
+        ttt.play(0, 0); // X
+        ttt.play(1, 1);
+        ttt.play(0, 1); // X
+        ttt.play(1, 2);
+        ttt.play(0, 2); // X
+
+        boolean gameOver = ttt.isGameOver();
+
+        Assert.assertTrue(gameOver);
+    }
+
+    @Test
+    public void NewBoard_notWinningPlay() {
+        TicTacToe ttt = new TicTacToe();
+
+        ttt.play(0, 0);
+        ttt.play(0, 1);
+        ttt.play(1, 0);
+        ttt.play(1, 1);
+        ttt.play(2, 2);
+
+        boolean gameOver = ttt.isGameOver();
+
+        Assert.assertFalse(gameOver);
+    }
+
     //    A B C
     // 1. _ X _
     // 2. _ _ _
