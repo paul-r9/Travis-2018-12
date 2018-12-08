@@ -16,4 +16,13 @@ public class SampleTest {
     	ttt.addChar('X',0,0);
     	Assert.assertEquals(board1, ttt.printBoard());
     }
+    
+    @Test
+    public void test_no_overwrite(){
+    	TicTacToe ttt = new TicTacToe();
+    	String board1 = "X__\n___\n___\n";
+    	ttt.addChar('X',0,0);
+    	Assert.assertEquals(board1, ttt.printBoard());
+    	Assert.assertFalse( ttt.addChar('Y',0,0) );
+    }
 }
